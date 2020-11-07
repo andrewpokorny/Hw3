@@ -65,45 +65,54 @@
         const i = document.querySelector("img");
         
         i.src= "images/shepherd.jpg";
-        i.style.borderColor = "yellow";
+        i.style.borderColor = "yellow";}
 
-
+      document.querySelector("shepherd").onclick = ChangeImage(shepherd); 
+        
+        function ChangeHeading(shepherd){
         const h = document.getElementById("h1");
-        h.innerHTML = "Shepherd";
-       
-        }
-  document.querySelector("shepherd").onclick = ChangeImage(shepherd); 
+        h.innerHTML = "Shepherd";}
+
+        document.querySelector("shepherd").onclick = ChangeHeading(shepherd);
 
         function ChangeImage(penguin){
             const a = document.querySelector("img");
             a.src = "images/penguin.jpg";
-            a.style.borderColor = "red";
+            a.style.borderColor = "red";}
+            document.querySelector("penguin").onclick = ChangeImage(penguin);
+
+            function ChangeHeading(penguin){
 
             const b = document.getElementById("h1");
-            b.innerHTML = "Penguin";
-        }
-        document.querySelector("penguin").onclick = ChangeImage(penguin);
+            b.innerHTML = "Penguin";}
+
+            document.querySelector("penguin").onclick = ChangeHeading(penguin);
+        
+        
 
         function ChangeImage(lynx){
             const x = document.querySelector("img");
             x.src = "images/lynx.jpg";
-            x.style.borderColor = "lime";
+            x.style.borderColor = "lime";}
 
+            document.querySelector("lynx").onclick = ChangeImage(lynx);
+            function ChangeHeading(lynx){
             const r = document.getElementById("h1");
             r.innerHTML = "Lynx";
         }
+        document.querySelector("lynx").onclick = ChangeHeading(lynx);
         
-        document.querySelector("lynx").onclick = ChangeImage(lynx);
         
         function ChangeImage(leopard){
             const n = document.querySelector("img");
             n.src = "images/snowleopard.jpg";
             n.style.borderColor = "green";
-
+            document.querySelector("leopard").onclick = ChangeImage(leopard);
+            function ChangeHeading(leopard){
             const q = document.getElementById("h1")
             q.innerHTML = "Snow Leopard";
         }
-        document.querySelector("img").onclick = ChangeImage(leopard);
+       document.queryselector("leopard").onclick = ChangeHeading(leopard);
 
         function enlarge (){
         let Myimage = document.getElementById("img");
@@ -111,6 +120,7 @@
         y = y * 1.75;
         Myimage.width = y;}
          document.getElementById("img").onmouseover = enlarge; 
+        
         function getBackToOriginalSize (){
         let Myimage = document.querySelector("img");
          let w = myImage.width;

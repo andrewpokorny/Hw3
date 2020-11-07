@@ -65,10 +65,12 @@
     <div class="instruction">
     <script>
         function ChangeImage(){
-        if document.getElementById
+        const i = document.querySelector("img");
+        
+        i.src= "images/shepherd.jpg"
+
         }
-  
-  document.querySelector("button").onclick = function ()
+  document.querySelector("img").onclick = ChangeImage; 
 
     </script>
       <p>

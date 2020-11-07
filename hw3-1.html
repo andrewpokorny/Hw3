@@ -44,8 +44,8 @@
     </style>
   </head>
   <body>
-    <h1 class="center" id="heading">Animal Name Goes Here</h1>
-    <div class="center"id="display">
+    <h1 class="center" >Animal Name Goes Here</h1>
+    <div class="center">
       <img 
         alt="Image Goes Here"
         src="images/shepherd.jpg"
@@ -53,25 +53,71 @@
       />
     </div>
     <div class="center">
-      <button>Shepherd</button>
-      <button>Penguin</button>
-      <button>Leopard</button>
-      <button>Lynx</button>
+      <button id= "shepherd">Shepherd</button>
+      <button id="penguin">Penguin</button>
+      <button id="leopard">Leopard</button>
+      <button id= "lynx">Lynx</button>
     </div>
-<script>
-
-</script>
     <!-- You can remove the instructions below -->
     <div class="instruction">
     <script>
-        function ChangeImage(){
+        function ChangeImage(shepherd){
         const i = document.querySelector("img");
         
-        i.src= "images/shepherd.jpg"
+        i.src= "images/shepherd.jpg";
+        i.style.borderColor = "yellow";
 
+
+        const h = document.getElementById("h1");
+        h.innerHTML = "Shepherd";
+       
         }
-  document.querySelector("img").onclick = ChangeImage; 
+  document.querySelector("shepherd").onclick = ChangeImage(shepherd); 
 
+        function ChangeImage(penguin){
+            const a = document.querySelector("img");
+            a.src = "images/penguin.jpg";
+            a.style.borderColor = "red";
+
+            const b = document.getElementById("h1");
+            b.innerHTML = "Penguin";
+        }
+        document.querySelector("penguin").onclick = ChangeImage(penguin);
+
+        function ChangeImage(lynx){
+            const x = document.querySelector("img");
+            x.src = "images/lynx.jpg";
+            x.style.borderColor = "lime";
+
+            const r = document.getElementById("h1");
+            r.innerHTML = "Lynx";
+        }
+        
+        document.querySelector("lynx").onclick = ChangeImage(lynx);
+        
+        function ChangeImage(leopard){
+            const n = document.querySelector("img");
+            n.src = "images/snowleopard.jpg";
+            n.style.borderColor = "green";
+
+            const q = document.getElementById("h1")
+            q.innerHTML = "Snow Leopard";
+        }
+        document.querySelector("leopard").onclick = ChangeImage(leopard);
+
+        function enlarge (){
+        let Myimage = document.getElementById("img");
+        let y = Myimage.width;
+        y = y * 1.75;
+        Myimage.width = y;}
+         document.getElementById("img").onmouseover = enlarge; 
+        function getBackToOriginalSize (){
+        let Myimage = document.querySelector("img");
+         let w = myImage.width;
+         y = y/1.75;
+         myImage.width = y;}
+
+  document.querySelector("img").onmouseout = getBackToOriginalSize;
     </script>
       <p>
         Use internal (or external) JavaScript to implement the features below:

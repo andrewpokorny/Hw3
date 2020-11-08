@@ -42,27 +42,40 @@
     <h1 class="center">Another Celsius Fahrenheit Converter</h1>
 
     <div class="center">
-      <form action="" method="post">
+      <form name="converter" action="" method="post">
         <label
           >Celsius:
-          <input id="cel" name="cel" size="5" type="text" />
+          <input id="celsius" name="celsius" size="5" type="text"onChange="CelsiusConverter()" />
         </label>
         <label
           >Fahrenheit:
-          <input id="far" name="far" size="5" type="text" />
+          <input id="fahrenheit" name="fahrenheit" size="5" type="text" onChange="FahrenheitConverter()"/>
         </label>
-        <input type="text" placeholder="Type something here to see its length." size="50">
+        <input type="text" placeholder="" size="50">
 <p id="log"></p>
       </form>
     </div>
 <script>
-   function temperatureConverter(far) {
-  far = parseFloat(far;}
-  document.getElementById("cel").innerHTML = (far-32) / 1.8;
-   
+    function convert(temperature){ 
+    var celsius = document.getElementByName("celsius").value;
+    celsius = parseFloat(celsius);
+    var fahrenheit = document.getElementsByName("fahrenheit").value;
+    fahrenheit = parseFloat(fahrenheit);}
 
+    var conversionF;
+    var conversionC;   
+
+    if (undefined =""){
+      conversionF = document.getElementByName("celsius").value* 9 / 5 + 32;
+      document.getElementByName("fahrenheit").value = Math.round(conversionF);}
+    
+    if(undefined =""){
+      conversionC = document.getElementByName(("fahrenheit").value - 32)* 5 / 9;
+      document.getElementByName("celcius").value = Math.round(conversionC);}
+
+    document.getElementByName("converter").innerHTML = convert(temperature);
 </script>
-
+    
     <!-- You can remove the instructions below -->
     <div class="instruction">
       <p>

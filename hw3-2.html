@@ -69,9 +69,12 @@
       conversionF = document.getElementByName("celsius").value* 9 / 5 + 32;
       document.getElementByName("fahrenheit").value = Math.round(conversionF);}
     
-    if(undefined =""){
+    else if(undefined =""){
       conversionC = document.getElementByName(("fahrenheit").value - 32)* 5 / 9;
       document.getElementByName("celcius").value = Math.round(conversionC);}
+    
+    else {
+        document.alert("Non-numerical number entered");}
 
     document.getElementByName("converter").innerHTML = convert(temperature);
 </script>

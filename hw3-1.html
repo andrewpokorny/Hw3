@@ -47,6 +47,7 @@
     <h1 class="center" >Animal Name Goes Here</h1>
     <div class="center">
       <img 
+        id= "img"
         alt="Image Goes Here"
         src="images/shepherd.jpg"
         title="Animal Name"
@@ -119,13 +120,20 @@
         let y = Myimage.width;
         y = y * 1.75;
         Myimage.width = y;}
+        let l = Myimage.length;
+        l = l * 1.75;
+        Myimage.length = l;}
+
          document.getElementById("img").onmouseover = enlarge; 
         
         function getBackToOriginalSize (){
         let Myimage = document.querySelector("img");
-         let w = myImage.width;
+         let y = myImage.width;
          y = y/1.75;
          myImage.width = y;}
+         let l = myImage.length;
+         l = l/1.75;
+         myImage.length = l;}
 
   document.querySelector("img").onmouseout = getBackToOriginalSize;
     </script>

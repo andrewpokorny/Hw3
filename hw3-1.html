@@ -113,6 +113,17 @@ function lynx(){
 }
 lynxBtn.onclick = lynx;
 
+function enlarge(){
+  let w = image.width;
+  image.width = w * 1.75;
+}
+image.onmouseover = enlarge;
+
+function reduce(){
+  let w = image.width;
+  image.width = w / 1.75;
+}
+image.onmouseout = reduce;
     </script>
       <p>
         Use internal (or external) JavaScript to implement the features below:

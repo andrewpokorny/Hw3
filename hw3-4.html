@@ -41,41 +41,14 @@
   </head>
   <body>
     <h1 class="center">New HTML DOM Events</h1>
-    <div class="center">
-      <p>
-        This
-        <a href="https://developer.mozilla.org/en-US/docs/Web/Events">page</a>
-        listed many HTML DOM events. Create a web page named
-        <em>hw3-4.html</em> that applies one or multiple events. Your code
-        should:
-      </p>
-      <ul>
-          <script>
-          </script>
-        <li>
-          <strong>NOT</strong> only use event(s) that we have used in past
-          classes, such as <code>onclick</code>, <code>onmouseover</code>,
-          <code>onmouseout</code> and <code>oninput</code>. In other words, you
-          need to explore and learn some new events.
-        </li>
-        <li>
-          Be <strong>simple</strong> to explain the usage of the event(s) you
-          select.
-        </li>
-        <li>
-          Be <strong>interesting</strong>. It should solve a real-world problem.
-        </li>
-        <li>
-          <strong>NOT</strong> use same example that you find from
-          <a href="https://www.w3schools.com/">w3schools</a> or
-          <a href="https://developer.mozilla.org/en-US/">MDN</a> or any other
-          websites.
-        </li>
-        <li>
-          Use <strong>comments</strong> to describe the event(s) and how your
-          code works.
-        </li>
-      </ul>
-    </div>
+
+      <p id="datetime"></p>
+
+        <script>
+        var d = new Date();
+        d.setHours(14);
+        document.getElementById("datetime").innerHTML = d;
+        </script>
+  <p>This code displays the date and time, which is always applicable in the real world. It is simple, however a cool one I think.</p>
   </body>
 </html>

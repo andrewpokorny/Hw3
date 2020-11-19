@@ -37,10 +37,10 @@
     <h1 class="center">Another Blackjack</h1>
     <div class="center">
       <div class="cards">
-        <img alt="card-1" height="200" src="images/cards/green_back.png" />
-        <img alt="card-2" height="200" src="images/cards/green_back.png" />
-        <img alt="card-3" height="200" src="images/cards/green_back.png" />
-        <p class="result">You are Not Busted!</p>
+        <img id ="card-1" alt="card-1" height="200" src="images/cards/green_back.png" />
+        <img id= "card-2" alt="card-2" height="200" src="images/cards/green_back.png" />
+        <img id = "card-3" alt="card-3" height="200" src="images/cards/green_back.png" />
+        <p id="result">You are Not Busted!</p>
         <button>Hit</button>
       </div>
     </div>
@@ -49,15 +49,15 @@
     const shapes = ['c', 'D', 'H', 'S'];
 
     function hit(){
-      let susm = 0;
-      for (let i =1; i<=3; i++) {
-        let r1 = Math.floor(Math.random()* 13);
-        const r2 = Math.floor(Math.random()* 4);
+      let sum = 0;
+      for (let i = 1; i <= 3; i++) {
+        let r1 = Math.floor(Math.random() * 13);
+        const r2 = Math.floor(Math.random() * 4);
         const v = values[r1];
         const s = shapes[r2];
-        document.getElementById('card-' + i).src = "images/cards/" + v + s + ".png"
+        document.getElementById("card-" + i).src = "images/cards/" + v + s + ".png"
         if (r1 > 9){
-          r1= 10;
+          r1 = 10;
         }
         sum += r1 + 1;
         console.log(sum);

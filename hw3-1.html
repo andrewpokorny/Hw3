@@ -54,88 +54,65 @@
       />
     </div>
     <div class="center">
-      <button name= "shepherd">Shepherd</button>
-      <button name="penguin">Penguin</button>
-      <button name="leopard">Leopard</button>
-      <button name= "lynx">Lynx</button>
+      <button id= "shepherd">Shepherd</button>
+      <button id="penguin">Penguin</button>
+      <button id="leopard">Leopard</button>
+      <button id= "lynx">Lynx</button>
     </div>
     <!-- You can remove the instructions below -->
     <div class="instruction">
     <script>
-        function ChangeImage(shepherd){
-        const i = document.querySelector("img");
-        
-        i.src= "images/shepherd.jpg";
-        i.style.borderColor = "yellow";}
+      const shepherdBtn = document.getElementById("shepherd");
+      const penguinBtn = document.getElementById("penguin");
+      const leopardBtn = document.getElementById("leopard");
+      const lynxBtn = document.getElementById("lynx");
+      const image = document.querySelector("img");
+      const heading = document.querySelector("h1");
 
-      document.querySelector("shepherd").onclick = ChangeImage(shepherd); 
-        
-        function ChangeHeading(shepherd){
-        const h = document.getElementById("h1");
-        h.innerHTML = "Shepherd";}
+      function penguin(){
+        image.src ="images/penguin.jpg";
+        image.style.borderColor = "red";
+        heading.innerText = "Penguin";
+        shepherdBtn.style.backgroundColor = "white";
+        penguinBtn.style.backgroundColor = "silver";
+        leopardBtn.style.backgroundColor = "white";
+        lynxBtn.style.backgroundColor = "white";
+      }
+      penguinBtn.onclick = penguin;
 
-        document.querySelector("shepherd").onclick = ChangeHeading(shepherd);
+      function shepherd(){
+   image.src ="images/shepherd.jpg";
+   image.style.borderColor = "yellow";
+   heading.innerText = "Shepherd";
+   shepherdBtn.style.backgroundColor = "silver";
+   penguinBtn.style.backgroundColor = "white";
+   leopardBtn.style.backgroundColor = "white";
+   lynxBtn.style.backgroundColor = "white";
+ }
+ shepherdBtn.onclick = shepherd;
 
-        function ChangeImage(penguin){
-            const a = document.querySelector("img");
-            a.src = "images/penguin.jpg";
-            a.style.borderColor = "red";}
-            document.querySelector("penguin").onclick = ChangeImage(penguin);
+ function leopard(){
+  image.src ="images/snowleopard.jpg";
+  image.style.borderColor = "green";
+  heading.innerText = "Leopard";
+  shepherdBtn.style.backgroundColor = "white";
+  penguinBtn.style.backgroundColor = "white";
+  leopardBtn.style.backgroundColor = "silver";
+  lynxBtn.style.backgroundColor = "white";
+}
+leopardBtn.onclick = leopard;
 
-            function ChangeHeading(penguin){
+function lynx(){
+  image.src ="images/lynx.jpg";
+  image.style.borderColor = "lime";
+  heading.innerText = "Lynx";
+  shepherdBtn.style.backgroundColor = "white";
+  penguinBtn.style.backgroundColor = "white";
+  leopardBtn.style.backgroundColor = "white";
+  lynxBtn.style.backgroundColor = "silver";
+}
+lynxBtn.onclick = lynx;
 
-            const b = document.getElementById("h1");
-            b.innerHTML = "Penguin";}
-
-            document.querySelector("penguin").onclick = ChangeHeading(penguin);
-        
-        
-
-        function ChangeImage(lynx){
-            const x = document.querySelector("img");
-            x.src = "images/lynx.jpg";
-            x.style.borderColor = "lime";}
-
-            document.querySelector("lynx").onclick = ChangeImage(lynx);
-            function ChangeHeading(lynx){
-            const r = document.getElementById("h1");
-            r.innerHTML = "Lynx";
-        }
-        document.querySelector("lynx").onclick = ChangeHeading(lynx);
-        
-        
-        function ChangeImage(leopard){
-            const n = document.querySelector("img");
-            n.src = "images/snowleopard.jpg";
-            n.style.borderColor = "green";
-            document.querySelector("leopard").onclick = ChangeImage(leopard);
-            function ChangeHeading(leopard){
-            const q = document.getElementById("h1")
-            q.innerHTML = "Snow Leopard";
-        }
-       document.queryselector("leopard").onclick = ChangeHeading(leopard);
-
-        function enlarge (){
-        let Myimage = document.getElementById("img");
-        let y = Myimage.width;
-        y = y * 1.75;
-        Myimage.width = y;}
-        let l = Myimage.length;
-        l = l * 1.75;
-        Myimage.length = l;}
-
-         document.getElementById("img").onmouseover = enlarge; 
-        
-        function getBackToOriginalSize (){
-        let Myimage = document.querySelector("img");
-         let y = myImage.width;
-         y = y/1.75;
-         myImage.width = y;}
-         let l = myImage.length;
-         l = l/1.75;
-         myImage.length = l;}
-
-  document.querySelector("img").onmouseout = getBackToOriginalSize;
     </script>
       <p>
         Use internal (or external) JavaScript to implement the features below:

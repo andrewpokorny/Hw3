@@ -45,59 +45,31 @@
       </div>
     </div>
     <script>
-        let cardnames = {"One","Two", "Three", "Four," "Five", "Six","Seven", "Eight", "Nine", "Ten" }
-        let cardvalue = {1,2,3,4,5,6,7,8,9,10}
-        let cardtype = {Ace, Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, Queen, King}
-        function assignnumericvalue(){
-            if (cardtype === "Ten", "Jack", "Queen", "King")
-            return 10 
-            document.getElementsByClassName("cards"). src = "images/JC.png"; "images/JH.png"; "images/JD.png";"images/JS.png;"
-            "images/KC.png"; "images/KD.png"; "images/KH.png"; "images/KS.png"; "images/10C.png"; "images/10D.png";
-            "images/10H.png"; "images/10S.png"; "images/QH.png"; "images/QD.png"; "images/QC.png"; "images/QS.png"}
-            else if (cardtype === "Ace")
-            return 1
-            document.getElementsByClassName("cards"). src = "images/AC.png"; "images/AD.png"; "images/AH.png"; "images/AD.png";}
-            else if (cardtype === "Two")
-            return 2
-            document.getElementsByClassName("cards"). src = "images/2C.png"; "images/2D.png"; "images/2H.png"; "images/2S.png";}
-            else if (cardtype === "Three")
-            return 3 
-            
-            document.querySelector("button").onclick = assignnumericvalue;
-            
-            function (game){
+    const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+    const shapes = ['c', 'D', 'H', 'S'];
 
-            }
-
-
-
-
-
-
-
-
-            
-            
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-        
-             
-             
-            
-             
-             
-            
-        
+    function hit(){
+      let susm = 0;
+      for (let i =1; i<=3; i++) {
+        let r1 = Math.floor(Math.random()* 13);
+        const r2 = Math.floor(Math.random()* 4);
+        const v = values[r1];
+        const s = shapes[r2];
+        document.getElementById('card-' + i).src = "images/cards/" + v + s + ".png"
+        if (r1 > 9){
+          r1= 10;
+        }
+        sum += r1 + 1;
+        console.log(sum);
+      }
+      if (sum > 21){
+        document.getElementById("result").innerHTML = "You are Busted";}
+        else {
+          document.getElementById("result").innerHTML = "You are Not Busted";
+        }
+      }
+                                                                             
+    document.querySelector('button').onclick = hit;    
     </script>
     <!-- You can remove the instructions below -->
     <div class="instruction">
